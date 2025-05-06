@@ -1,119 +1,94 @@
-/* Reset and base styles */
-body, html {
+/* ======= Global Styles ======= */
+body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  overflow-x: hidden;
-  background-color: #000;
-  color: #fff;
+  background: #fefefe;
+  color: #333;
+  text-align: center;
 }
 
-/* Intro Section */
-#intro {
-  background: url('https://qu.ax/iOBLK.jpeg') no-repeat center center/cover;
+/* ======= Intro Animation (index.html) ======= */
+.intro {
   height: 100vh;
+  background: linear-gradient(#0d0d0d, #1a1a1a);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
-.overlay {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 0 25px #fff;
+.moon {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(white, #aaa);
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  right: 150px;
+  box-shadow: 0 0 60px #ffffff88;
 }
 
-.overlay h1 {
-  font-size: 3em;
-  margin-bottom: 30px;
-  color: #ffffff;
-  text-shadow: 0 0 15px #0ff;
-  animation: fadeIn 2s ease-in-out;
+.clouds {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.ibb.co/YRPrLXN/cloud.png') repeat-x;
+  animation: moveClouds 60s linear infinite;
+  opacity: 0.3;
 }
 
-.enter-btn {
-  padding: 15px 35px;
-  font-size: 1.2em;
-  color: #000;
-  background: #00fff2;
-  border: none;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 15px #00fff2;
-  transition: transform 0.3s;
-}
-.enter-btn:hover {
-  transform: scale(1.1);
+@keyframes moveClouds {
+  0% { background-position: 0 0; }
+  100% { background-position: 10000px 0; }
 }
 
-/* Main Page */
-#main {
-  padding: 60px 20px;
-  background: url('https://i.ibb.co/b39k8Lk/ipad-bg.jpg') no-repeat center center/cover;
-  min-height: 100vh;
-  text-align: center;
-}
-
-/* Title Card */
-.card {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 30px;
-  margin-bottom: 40px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #0ff;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  animation: slideFade 1.5s ease;
-}
-.card h2 {
-  font-size: 2.5em;
+.glow-text {
+  font-size: 2.8em;
   color: #fff;
-  text-shadow: 0 0 10px #0ff;
+  text-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055, 0 0 60px #ff0055;
 }
 
-/* iPad Frame & Buttons */
-.ipad-frame {
-  background: rgba(0, 0, 0, 0.9);
-  border: 8px solid #666;
-  border-radius: 30px;
-  padding: 40px 20px;
-  max-width: 400px;
-  margin: auto;
-  box-shadow: 0 0 30px #000;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* ======= Main Page Styles (main.html) ======= */
+.main-wrapper {
+  padding-top: 100px;
+}
+
+.title {
+  font-size: 2.8em;
+  color: #ff4d4d;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: inline-block;
 }
 
 .btn {
+  display: block;
+  background: linear-gradient(135deg, #ff4d4d, #ff6666);
+  color: white;
   padding: 15px;
-  border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #00fff2, #0ff);
-  color: #000;
-  font-size: 1em;
-  font-weight: bold;
+  margin: 15px 0;
+  border-radius: 10px;
   text-decoration: none;
-  box-shadow: 0 0 10px #0ff;
-  transition: transform 0.2s ease;
+  font-size: 1.1em;
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+  transition: transform 0.2s;
 }
 
 .btn:hover {
   transform: scale(1.05);
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideFade {
-  from { opacity: 0; transform: translateY(50px); }
-  to { opacity: 1; transform: translateY(0); }
+footer {
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #999;
 }
