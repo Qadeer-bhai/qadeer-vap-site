@@ -2,25 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Qadeer VIP Website</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="intro">
-    <h1 class="fade-in">Welcome to Qadeer Website</h1>
-    <h2 class="fade-in delay">Welcome to Qadeer Hacking Zone</h2>
-  </div>
 
-  <div class="main-card">
-    <div class="ipad-frame">
-      <button class="menu-button" onclick="goToLink(1)">Button One</button>
-      <button class="menu-button" onclick="goToLink(2)">Button Two</button>
-      <button class="menu-button" onclick="goToLink(3)">Button Three</button>
-      <button class="menu-button" onclick="goToLink(4)">Button Four</button>
-      <button class="menu-button" onclick="goToLink(5)">Button Five</button>
+  <!-- Intro Section -->
+  <section id="intro">
+    <div class="overlay">
+      <h1>Welcome to Qadeer Website</h1>
     </div>
-  </div>
+  </section>
+
+  <!-- Main Content -->
+  <section id="main">
+    <div class="card">
+      <h2>Official Tools Panel</h2>
+      <div class="ipad-frame">
+        <button class="btn">Button One</button>
+        <button class="btn">Button Two</button>
+        <button class="btn">Button Three</button>
+        <button class="btn">Button Four</button>
+        <button class="btn">Button Five</button>
+      </div>
+    </div>
+  </section>
 
   <script src="main.js"></script>
 </body>
