@@ -1,20 +1,10 @@
-const introText = document.getElementById("intro-text");
-const introLines = [
-  "Welcome to Qadeer Website",
-  "Welcome to Qadeer Hacking Zone"
-];
-
-let lineIndex = 0;
-
-function showIntroText() {
-  if (lineIndex < introLines.length) {
-    introText.innerText = introLines[lineIndex];
-    lineIndex++;
-    setTimeout(showIntroText, 2500);
-  } else {
-    document.querySelector(".intro").style.display = "none";
-    document.querySelector(".main-content").style.display = "block";
-  }
+function goToLink(buttonNumber) {
+  let urls = {
+    1: "ENTER LINK 1 HERE",
+    2: "ENTER LINK 2 HERE",
+    3: "ENTER LINK 3 HERE",
+    4: "ENTER LINK 4 HERE",
+    5: "ENTER LINK 5 HERE"
+  };
+  window.location.href = urls[buttonNumber];
 }
-
-window.onload = showIntroText;
