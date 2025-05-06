@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Qadeer VIP Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qadeer Intro</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="intro">
+    <div class="moon"></div>
+    <div class="clouds"></div>
+    <div class="glow-text">Welcome to Qadeer Website</div>
+  </div>
 
-  <!-- Intro Section -->
-  <section id="intro">
-    <div class="overlay">
-      <h1>Welcome to Qadeer Website</h1>
-      <a href="main.html" class="enter-btn">Enter</a>
-    </div>
-  </section>
-
+  <script>
+    setTimeout(() => {
+      window.location.href = "main.html";
+    }, 5000); // 5 seconds then redirect
+  </script>
 </body>
 </html>
