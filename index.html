@@ -2,21 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Qadeer Intro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qadeer Website</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="intro">
+
+  <!-- Intro Section -->
+  <div id="intro" class="intro">
     <div class="moon"></div>
+    <div class="fireflies"></div>
     <div class="clouds"></div>
-    <div class="glow-text">Welcome to Qadeer Website</div>
+    <h1 class="intro-title">Welcome to Qadeer Website</h1>
   </div>
 
-  <script>
-    setTimeout(() => {
-      window.location.href = "main.html";
-    }, 5000); // 5 seconds then redirect
-  </script>
+  <!-- Main Page -->
+  <div id="main" class="main hidden">
+    <h1 class="main-title">Welcome to Qadeer Website</h1>
+
+    <div class="ipad">
+      <div class="button-panel">
+        <a href="enter your link here" class="main-button">Button One</a>
+        <a href="enter your link here" class="main-button">Button Two</a>
+        <a href="enter your link here" class="main-button">Button Three</a>
+        <a href="enter your link here" class="main-button">Button Four</a>
+        <a href="enter your link here" class="main-button">Button Five</a>
+      </div>
+    </div>
+
+    <footer class="footer-caption">
+      © 2025 Qadeer-VIP. All rights reserved.
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
