@@ -1,94 +1,120 @@
-/* ======= Global Styles ======= */
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #fefefe;
-  color: #333;
-  text-align: center;
+  background: black;
+  overflow: hidden;
+  color: white;
 }
 
-/* ======= Intro Animation (index.html) ======= */
+/* Intro Section */
 .intro {
+  position: fixed;
+  width: 100%;
   height: 100vh;
-  background: linear-gradient(#0d0d0d, #1a1a1a);
+  background: radial-gradient(ellipse at center, #000 60%, #111);
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow: hidden;
+  flex-direction: column;
+  z-index: 10;
+  animation: fadeOut 3s ease 4s forwards;
+}
+
+.intro-title {
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px white;
+  animation: glow 3s ease-in-out;
 }
 
 .moon {
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(white, #aaa);
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(ellipse at center, #fff, #aaa);
   border-radius: 50%;
+  box-shadow: 0 0 60px white;
   position: absolute;
-  top: 100px;
-  right: 150px;
-  box-shadow: 0 0 60px #ffffff88;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.clouds {
+.fireflies, .clouds {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('https://qu.ax/iOBLK.jpeg') repeat-x;
-  animation: moveClouds 60s linear infinite;
-  opacity: 0.3;
+  pointer-events: none;
+  background: url('https://www.transparenttextures.com/patterns/fog.png') repeat;
 }
 
-@keyframes moveClouds {
-  0% { background-position: 0 0; }
-  100% { background-position: 10000px 0; }
-}
-
-.glow-text {
-  font-size: 2.8em;
-  color: #fff;
-  text-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055, 0 0 60px #ff0055;
-}
-
-/* ======= Main Page Styles (main.html) ======= */
-.main-wrapper {
+/* Main Page */
+.main {
   padding-top: 100px;
-}
-
-.title {
-  font-size: 2.8em;
-  color: #ff4d4d;
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
-  margin-bottom: 30px;
-}
-
-.card {
+  text-align: center;
   background: #fff;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  display: inline-block;
+  color: #000;
+  min-height: 100vh;
+  transition: all 1s ease-in;
 }
 
-.btn {
-  display: block;
-  background: linear-gradient(135deg, #ff4d4d, #ff6666);
+.hidden {
+  display: none;
+}
+
+.main-title {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px red;
+}
+
+.ipad {
+  background: black;
+  padding: 40px;
+  border-radius: 30px;
+  width: 320px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.button-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-button {
+  background: #ff4d4d;
   color: white;
   padding: 15px;
-  margin: 15px 0;
-  border-radius: 10px;
   text-decoration: none;
-  font-size: 1.1em;
-  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
-  transition: transform 0.2s;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
 }
 
-.btn:hover {
+.main-button:hover {
   transform: scale(1.05);
 }
 
-footer {
-  margin-top: 50px;
-  font-size: 0.9em;
-  color: #999;
+.footer-caption {
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Animations */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px white;
+  }
+  50% {
+    text-shadow: 0 0 20px white;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
